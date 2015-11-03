@@ -41,6 +41,7 @@ access_log off;
 include /etc/nginx/proxy.conf;
 {{ else }}
 # HTTP 1.1 support
+client_max_body_size 10M;
 proxy_http_version 1.1;
 proxy_buffering off;
 proxy_set_header Host $http_host;
